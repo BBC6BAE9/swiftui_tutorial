@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BACD4E7429A7D529002C8288 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BACD4E7629A7D529002C8288 /* Localizable.strings */; };
 		BAF760DD29A7ACFE00277507 /* RoomsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF760DC29A7ACFE00277507 /* RoomsApp.swift */; };
 		BAF760DF29A7ACFE00277507 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF760DE29A7ACFE00277507 /* ContentView.swift */; };
 		BAF760E129A7ACFF00277507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF760E029A7ACFF00277507 /* Assets.xcassets */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BACD4E7529A7D529002C8288 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BACD4E7729A7D52D002C8288 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BAF760D929A7ACFE00277507 /* Rooms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rooms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF760DC29A7ACFE00277507 /* RoomsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsApp.swift; sourceTree = "<group>"; };
 		BAF760DE29A7ACFE00277507 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +112,7 @@
 				BAF7610829A7AE4B00277507 /* Room.swift */,
 				BAF760E029A7ACFF00277507 /* Assets.xcassets */,
 				BAF7610629A7AE4100277507 /* Rooms.xcassets */,
+				BACD4E7629A7D529002C8288 /* Localizable.strings */,
 				BAF760E229A7ACFF00277507 /* Preview Content */,
 			);
 			path = Rooms;
@@ -225,6 +229,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = BAF760D029A7ACFE00277507;
 			productRefGroup = BAF760DA29A7ACFE00277507 /* Products */;
@@ -244,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAF760E429A7ACFF00277507 /* Preview Assets.xcassets in Resources */,
+				BACD4E7429A7D529002C8288 /* Localizable.strings in Resources */,
 				BAF7610729A7AE4100277507 /* Rooms.xcassets in Resources */,
 				BAF760E129A7ACFF00277507 /* Assets.xcassets in Resources */,
 			);
@@ -309,6 +315,18 @@
 			targetProxy = BAF760F429A7ACFF00277507 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BACD4E7629A7D529002C8288 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BACD4E7529A7D529002C8288 /* ar */,
+				BACD4E7729A7D52D002C8288 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BAF760FB29A7ACFF00277507 /* Debug */ = {
