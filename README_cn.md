@@ -1,62 +1,71 @@
-Language：English｜<a href="./README_cn.md">中文</a>｜
+语言：<a href="./README.md">English</a>｜中文｜
 
-# SwiftUI Best Practice
+# SwiftUI最佳实践
 
-Author：bbc6bae9
+作者：bbc6bae9
 
 
-## 1、Why SwiftUI？
+## 1、为什么用SwiftUI？
 
-(1) **Simplicity**: SwiftUI is so simple that even independent developers with a design background can master it. For mature developers experienced in both OC and Swift, it takes only about a week to develop a complete prototype product after mastering SwiftUI. The development efficiency is astonishing.
+（1）**简单**：简单到社区里多设计师在做独立开发，然而对于OC和Swift的成熟开发者来讲，掌握SwiftUI后开发完整的原型产品大概需要一周的时间即可完成。开发效率惊人。
 
 ![pic1](./images/pic1.png)
 
-（2）**Cross-platform**: On GitHub, you can see more and more open-source client projects migrating to SwiftUI. This is because maintaining apps on multiple platforms is a very costly endeavor.
+（2）**跨平台**：在github上你可以看到越来越多的开源客户端项目开始往SwiftUI上进行迁移。因为维护多个平台的App是一件成本非常高的事情。
 
-（3）**Official support**: As economic interests are closely related, I once read a sentence in a technical blog that said, "Only Apple itself will truly consider the developers in its own ecosystem because of its practical economic interests." This is also the root cause of the inadequacy of third-party frameworks.
+（3）**官方支持**：因为利益紧密相关，曾经在一篇技术博客看到一句话：”因为切实的经济利益相关，只有苹果自己才会真正的为自己生态的开发者考虑。“， 二三方框架不好用的根源也在这里。
 
-> Apple's philosophy is: "Leave the technology to me, you go innovate, and let's make money together."
+> Apple：技术交给我，你们去搞创新，咱们一起赚钱。
 >
-> Third-party: No money, no reputation, no benefits. Sorry, we can no longer maintain it and have handed it over to the community.
+> 二三方框架：没钱、没声誉、没好处。不好意思，停止维护，已交给社区。
 
-（4）**Clean and elegant code**: The relatively fixed development routines greatly reduce the development difficulty and maintainability. Over the years, my work experience has shown that engineers are a very creative group, creating architecture patterns such as `MVC`, `MVCS`,  `MVVM`, ` MVP`, and  `VIPER` , in addition to the design patterns written in textbooks. In each team, there are also more complex code designs and practices (which are indeed very clever, but difficult to understand!). Like UIKit, SwiftUI is a blank canvas, allowing you to develop using any architecture and code design. However, overall, SwiftUI is a reactive UI framework, and from official demos and community best practices, it is generally more suitable for MVVM. For specific best practices, please refer to the section below the article.
+（4）**代码简洁优雅**：相对固定的开发套路，大大的降低了开发难度和可维护性。这些年的工作经验让我发现，工程师的是非常有创造力的一个群体，他们创造了`MVC`、`MVCS`、`MVVM`、`MVP`、`VIPER`架构模式。除了这些写到教科书的设计模式。具体到每个团队里面，还有更多骚到不行的代码设计和写法（他们的确很精妙，但是很难懂！），SwiftUI和UIKit一样，是一个空白的画布，你可以用任意架构和代码设计进行开发。但是整体上看SwiftUI是响应式UI框架，从官方的demo和社区的最佳实践来看，整体还是更适合MVVM。具体的最佳实践，可以参考文章下面的部分。
 
-（5）**Good compatibility**: Swift seamlessly supports Objective-C, and SwiftUI seamlessly supports UIKit, so previous code can still be used.
+（5）**兼容性好**： Swift无缝兼容Objective-C，SwiftUI无缝兼容UIKit，以前的代码仍然可以使用。
 
-（6）**Reactive**: It is reactive and naturally size-adaptive, with different expressions for the iPad in portrait and landscape modes, and comes with the system's smooth animations. Compared to code that hardcodes frames and repeatedly checks for portrait or landscape orientation (although autolayout can also solve this with slightly more code), it is definitely more efficient.
+（6）**响应式**：因为是响应式，天然的尺寸自适应，比如iPad在横竖屏时候的不同表现，自带系统的丝滑动画。比起写死frame的，反复判断横竖屏的代码（尽管autolayout也可以解决，代码量稍多），不可不谓666
 
-（7）**Previewable**: The biggest benefit of previewing for me is that if I take over the development of a certain view, I don't need to laboriously construct data and constantly look at the context of the code to analyze it. What you see is what you get, and you can complete development and iteration in the current view.
+（7）**可预览**：可预览对我来说最大的好处就是，如果我接手了某个视图的开发，不需要辛苦的构造数据，不停的查看代码的上下文来分析，所见即所得，在当前视图即可完成开发和迭代
 
-## 2、Simple UI
+## 2、简单的UI
 
-Regarding the development of simple UIs, it's unlikely that there are better tutorials available than the official SwiftUI tutorials. 
+关于简单UI的开发市面上大概不会有比官方swiftui tutorials更好的教程了，完成学习后，你将掌握
 
-1. [Creating and combining views](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
-2. [Building list and navigation](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
-3. [Handling user input](https://developer.apple.com/tutorials/swiftui/handling-user-input)
-4. [Drawing paths and shapes](https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes)
-5. [Animating views and transiations](https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions)
-6. [Composing complex interfaces](https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces)
-7. [Working with UI sontrols](https://developer.apple.com/tutorials/swiftui/working-with-ui-controls)
-8. [Interfacing with UIKit](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit)
-9. [Creating watchOS app](https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app)
-10.  [Creating macOS app](https://developer.apple.com/tutorials/swiftui/creating-a-macos-app)
+1、 [创建自定义视图](https://developer.apple.com/tutorials/swiftui/creating-and-combining-views)
 
-## 3、MVVM
+2、 [使用列表和导航](https://developer.apple.com/tutorials/swiftui/building-lists-and-navigation)
 
-The MVVM design pattern and reactive frameworks are a match made in heaven.
+3、 [处理用户输入](https://developer.apple.com/tutorials/swiftui/handling-user-input)
 
-`Model`: Data requested from local or remote sources
+4、 [绘图](https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes)
 
-`ViewModel`: Interacts directly with the page, details View's user operations
+5、 [动画](https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions)
 
-`View`: SwiftUI.View, responds to data changes in the viewModel
+6、 [复杂页面](https://developer.apple.com/tutorials/swiftui/composing-complex-interfaces)
+
+7、 [掌握UI控件](https://developer.apple.com/tutorials/swiftui/working-with-ui-controls)
+
+8、 [兼容UIKit](https://developer.apple.com/tutorials/swiftui/interfacing-with-uikit)
+
+9、 [开发watchOS](https://developer.apple.com/tutorials/swiftui/creating-a-watchos-app)
+
+10、 [开发macOS](https://developer.apple.com/tutorials/swiftui/creating-a-macos-app)
+
+## 3、MVVM基础
+
+MVVM设计模式和响应式框架天生绝配。
+
+`Model`：本地或者远程请求来的数据
+
+`viewModel`：直接与页面进行交互，详情View上的用户操作
+
+`View`：SwiftUI.View，响应viewModel的数据变化
 
 ![pic2](./images/pic2.png)
 
-## 4、Page with network response
+## 4、带有网络请求的页面
 
-We can define a enum called DataFetchPhase to store the state of the network
+我们在ViewModel引入一个网络请求的状态的变量，View来监听这个变量
 
 ```swift
 enum DataFetchPhase<T> {
@@ -73,13 +82,13 @@ enum DataFetchPhase<T> {
 }
 ```
 
-`empty`：loading state
+empty：是页面正处于加载状态
 
-`success(T)`：success state. and the network response is T
+success(T)：数据已经请求成功，返回的数据是T
 
-`failure(Error)`：failure state
+failure(Error)：网络请求失败，Error是具体的错误（可以在ViewModel中处理，也可以在View上展示）
 
-View
+View代码
 
 ```swift
 import SwiftUI
@@ -133,7 +142,7 @@ public struct DemoPage: View {
 }
 ```
 
-ViewModel
+ViewModel代码
 
 ```
 @MainActor
@@ -153,7 +162,7 @@ class DemoPageViewModel: ObservableObject {
 }
 ```
 
-Model
+Model代码
 
 ```swift
 struct NetResponse {
@@ -163,7 +172,7 @@ struct NetResponse {
 
 
 
-## 5、Complex Card Page
+## 5、复杂卡片页面
 
 ![pic3](./images/pic3.png)
 
@@ -205,14 +214,15 @@ struct NetResponse {
 }]
 ```
 
-The red one is the `Father Card`，the purple one is `Child Card`
+红色的是`大卡`，紫色的是`子卡`
 
-> Page and every card has it's own Model、View和ViewModel
+> 每张卡片都有自己的Model、View和ViewModel
 >
+> 页面也有自己的Model、View和ViewModel
 
 talk is cheap: [complex_card_in_swiftui](./complex_card_in_swiftui)
 
-## 6、App Design
+## 6、架构设计
 
 由于SwiftUI缺乏最佳实践作指导，实际开发的过程中，发现很多问题：导航栈上的页面重复init、tab页面一次性加载的问题。仔细梳理了关于架构的需求之后，我们无论是SwiftUI还是UIKit的App在架构设计上的需求都是一致的：
 
@@ -220,9 +230,9 @@ talk is cheap: [complex_card_in_swiftui](./complex_card_in_swiftui)
 
 2、`路由`：这涉及到站内站外的路由问题，目的是为了进行页面间的接耦
 
-### 6.1 Tab
+### 6.1 页面组织问题
 
-(1) lazyload for tab's root view
+(1) tab的根页面懒加载
 
 ```swift
 struct LazyView<Content: View>: View {
@@ -257,7 +267,7 @@ struct VBTabView: View {
 }
 ```
 
-(2) Navigation
+(2) 独立导航
 
 ```swift
 import SwiftUI
@@ -288,9 +298,9 @@ struct TabPage<Content: View>: View {
 }
 ```
 
-### 6.2 Router
+### 6.2 站内外路由
 
-In App Router
+站内路由
 
 ```swift
 // 站内路由
@@ -303,7 +313,7 @@ enum Route: Hashable {
 }
 ```
 
-Router for deeplink
+站外路由
 
 ```swift
 import SwiftUI
@@ -311,13 +321,14 @@ import SwiftUI
 @main
 struct ScaffoldApp: App {
     @State var router: Router = .init()
-    private static let scheme = "txvideo"
-    private static let host = "v.qq.com"
+    private static let scheme = "txvideo" // 协议头
+    private static let host = "v.qq.com" // 域名
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(self.router)
                 .onOpenURL(perform: { url in
+                    // 判断外链的协议头和域名是否符合约定
                     guard url.scheme == ScaffoldApp.scheme,
                           url.host() == ScaffoldApp.host else {
                         return
@@ -338,4 +349,5 @@ struct ScaffoldApp: App {
 }
 ```
 
-finally，talk is cheap: [scaffold_swiftui](./scaffold_swiftui)
+最后，传统艺能，talk is cheap: [scaffold_swiftui](./scaffold_swiftui)
+
