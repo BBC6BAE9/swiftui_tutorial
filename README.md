@@ -217,7 +217,7 @@ struct NetResponse {
 >
 > 页面也有自己的Model、View和ViewModel
 
-talk is cheap: https://github.com/BBC6BAE9/complex_card_in_swiftui
+talk is cheap: [complex_card_in_swiftui](./complex_card_in_swiftui)
 
 ## 6、架构设计
 
@@ -346,4 +346,5 @@ struct ScaffoldApp: App {
 }
 ```
 
-最后，传统艺能，talk is cheap: https://github.com/BBC6BAE9/scaffold_swiftui
+最后，传统艺能，talk is cheap: [scaffold_swiftui](./scaffold_swiftui)
+ 
