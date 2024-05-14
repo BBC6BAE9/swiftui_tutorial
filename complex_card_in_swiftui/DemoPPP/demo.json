@@ -1,0 +1,31 @@
+[{
+    "title": "Top Frameworks",
+    "blocks": [{
+        "title": "block1",
+        "subTitle": "swiftUI"
+    }, {
+        "title": "block2",
+        "subTitle": "React"
+    }, {
+        "title": "block3",
+        "subTitle": "Angular"
+    }, {
+        "title": "block4",
+        "subTitle": "Vue.js"
+    }]
+}, {
+    "title": "Popular Languages",
+    "blocks": [{
+        "title": "block5",
+        "subTitle": "JavaScript"
+    }, {
+        "title": "block6",
+        "subTitle": "Python"
+    }, {
+        "title": "block7",
+        "subTitle": "Java"
+    }, {
+        "title": "block8",
+        "subTitle": "Swift"
+    }]
+}]
