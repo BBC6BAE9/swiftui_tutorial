@@ -167,9 +167,9 @@ struct NetResponse {
 
 ![pic3](./images/pic3.png)
 
-一句话：给页面和每个卡片一个ViewModel
+Assign a ViewModel to each page and card for complex pages with multiple layers.
 
-针对复杂的页面，后台一般会下发若干层级的页面
+Server provide nested data like following format.
 
 ```json
 [{
@@ -214,13 +214,13 @@ talk is cheap: [complex_card_in_swiftui](./complex_card_in_swiftui)
 
 ## 6、App Design
 
-由于SwiftUI缺乏最佳实践作指导，实际开发的过程中，发现很多问题：导航栈上的页面重复init、tab页面一次性加载的问题。仔细梳理了关于架构的需求之后，我们无论是SwiftUI还是UIKit的App在架构设计上的需求都是一致的：
+Due to the lack of best practices guidance for SwiftUI, many issues have been discovered during actual development, such as repeated initialization of pages on the navigation stack and the problem of loading all tab pages at once. After carefully analyzing the architectural requirements, the architectural design requirements for both SwiftUI and UIKit apps are consistent:
 
-1、`页面组织`：每个Tab能懒加载自己的模块，每个Tab有一个根页面，根页面有自己独立的导航，可以不听的push下去
+`Page organization`: Each tab can lazily load its own module, and each tab has a root page with its own independent navigation that can be pushed down indefinitely.
 
-2、`路由`：这涉及到站内站外的路由问题，目的是为了进行页面间的接耦
+`Routing`: This involves the issue of in-site and out-of-site routing, with the aim of decoupling pages from each other.
 
-### 6.1 Tab
+### 6.1 Page organization
 
 (1) lazyload for tab's root view
 
@@ -288,7 +288,7 @@ struct TabPage<Content: View>: View {
 }
 ```
 
-### 6.2 Router
+### 6.2 Routing
 
 In App Router
 
