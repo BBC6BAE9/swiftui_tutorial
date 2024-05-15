@@ -1,9 +1,10 @@
 Language：English｜<a href="./README_cn.md">中文</a>｜
 
-![SwiftUI](/assets/elements/icons/swiftui/swiftui-96x96_2x.png)
 <div align="center">
   <img src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png" alt="SwiftUI">
 </div>
+
+
 # SwiftUI Best Practice
 
 Author：bbc6bae9
