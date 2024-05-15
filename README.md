@@ -2,7 +2,6 @@ Language：English｜<a href="./README_cn.md">中文</a>｜
 
 <div align="center">
   <img src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png" alt="SwiftUI">
-	  <p>This is an article about how to use SwiftUI to build the architecture of a large-scale app.</p>
 </div>
 
 # SwiftUI Best Practice
