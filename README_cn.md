@@ -1,5 +1,7 @@
 语言：<a href="./README.md">English</a>｜中文｜
-
+<div align="center">
+  <img src="https://developer.apple.com/assets/elements/icons/swiftui/swiftui-96x96_2x.png" alt="SwiftUI">
+</div>
 # SwiftUI最佳实践
 
 作者：bbc6bae9
